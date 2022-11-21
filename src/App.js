@@ -1,9 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useEffect} from "react";
-import {
-	Button,	
-} from "reactstrap";
 
 function App() {
 
@@ -61,7 +58,7 @@ function App() {
         >
           Learn React
         </a>
-        { isReadyForInstall&& <Button onClick={upload} className="d-block text-corpoelec mt-2 mb-3">Descaragr App</Button>}
+        { isReadyForInstall&& <a onClick={upload} className="d-block text-corpoelec mt-2 mb-3">Descaragr App</a>}
       </header>
 
     </div>
