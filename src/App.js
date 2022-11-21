@@ -14,7 +14,7 @@ function App() {
     window.addEventListener("beforeinstallprompt", (event) => {
       // Prevent the mini-infobar from appearing on mobile.
       event.preventDefault();
-      console.log("👍", "print event", event);
+      console.log("👍", "print event", event,isReadyForInstall);
       // Stash the event so it can be triggered later.
       window.deferredPrompt = event;
       // Remove the 'hidden' class from the install button container.
@@ -61,9 +61,7 @@ function App() {
         >
           Learn React
         </a>
-      <Button onClick={upload} className="d-block text-corpoelec mt-2 mb-3">
-        Descaragr App
-      </Button>
+        { isReadyForInstall&& <Button onClick={upload} className="d-block text-corpoelec mt-2 mb-3">Descaragr App</Button>}
       </header>
 
     </div>
